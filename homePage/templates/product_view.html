@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>JUICE SHOP</title>
+</head>
+<style>
+    body{
+        background-color: rgba(213, 104, 68, 0.83);
+        font-size: 10px;
+        font-family: Verdana;
+    }
+    p, img, h2{
+            padding-left: 30%;
+        }
+    h2{
+        margin-left: 15%;
+    }
+    p{
+        margin-left: 10%;
+    }
+    img{
+        margin-top: 20px;
+        width: 50%;
+        height: 20%;
+        }
+    .container{
+        background-color: white;
+        margin-left: 250px;
+        width: 600px;
+            /* padding: 100px; */
+        font-size: 20px;
+        border-radius: 30px; 
+        margin-right: 250px;
+}
+button{
+    background-color:rgba(213, 104, 68, 0.83);
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
+    margin-left: 45%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border: none;
+    }
+
+</style>
+<body>
+    <div class="container">
+
+        {% if product.picture %}
+            <img src="{{product.picture.url}}">
+            {% endif %}
+        <h2>{{product.product_name}}</h2>
+        <p>{{product.start_date}}</p>
+        <p>{{product.end_date}}</p>
+        <button> <a href="{% url 'register' %}"> Apply</a></button>
+    </div>
+</body>
+</html>
