@@ -1,1 +1,1 @@
-web: gunicorn schoolsystem.wsgi
+web: gunicorn products_shop.wsgi
