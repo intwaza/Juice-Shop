@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUICE SHOP</title>
+    <title>Juice Shop</title>
 </head>
 <style>
     body{
@@ -32,7 +32,6 @@ img{
     margin-left: 10%;
 }
 .button{
-    text-decoration: none;
         background-color:rgba(213, 104, 68, 0.83);
         color: white;
         border-radius: 10px;
@@ -40,6 +39,7 @@ img{
         width: 80px;
         margin-left: 45%;
         margin-bottom: 10px;
+        text-decoration: none;
         border: none;
     }
     .head{
@@ -58,7 +58,8 @@ img{
     <form method="POST" enctype="multipart/form-data">
     {%csrf_token%}
     {{form.as_p}}
-    <button class="button"><a href="{% url 'registered' %}">Apply</a></button>
+    <button type="submit" class="button">Apply</button>
+    
     </form>
 </div>
 </body>

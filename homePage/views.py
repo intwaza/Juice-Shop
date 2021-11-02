@@ -1,7 +1,9 @@
+from typing import Reversible
 from django.shortcuts import redirect, render
 from homePage.models import Products
 from homePage.forms import RegistrationForm
 from .models import Register
+from django.urls import reverse
 
 
 
@@ -23,7 +25,7 @@ def register(request):
         form= RegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect ("register")
+            return redirect (reverse("registered"))
         else:
             print(form.errors)
     else:
