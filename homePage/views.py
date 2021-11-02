@@ -7,7 +7,6 @@ from .models import Register
 
 def home(request):
     products= Products.objects.all()
-    print(products)
     return render(request,"home.html" ,{"products": products})
     # return render(request,template_name='home.html')
 
